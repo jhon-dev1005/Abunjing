@@ -98,12 +98,12 @@ img {
 .element3 {
   position: absolute ;
   top: 20%;
-  right: 20%;
+  right: 0;
 }
 .element4 {
   position: absolute ;
   top: 20%;
-  left: 20%;
+  left: 0;
 }
 
 
