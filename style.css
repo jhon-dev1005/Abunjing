@@ -1,0 +1,110 @@
+.con {
+  display: flex;
+  width: 1100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Use viewport height for full-page height */
+}
+.msg {
+  height: 100vh;
+  position: relative;
+}
+
+.msg p {
+  margin:200px 0 0 300px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e6dcdc;
+}
+
+.msg a span {
+  position: relative;
+  top: -60px;
+  right: -60px;
+  z-index: 2;
+  text-decoration: double;
+  color: #282727;
+  font-size: 12px;
+  background-color: rgb(205, 199, 199);
+  padding: 20px 10px 20px 20px;
+  border-radius: 100%;
+  border-bottom-right-radius: 0;
+}
+img {
+  width: 100px;
+}
+
+@keyframes moveAround {
+  0% {
+    transform: translate(-50%, -50%); /* Center the element */
+  }
+  25% {
+    transform: translate(calc(50vw - 50%), calc(-50vh + 100px)); /* Move to top-right */
+  }
+  50% {
+    transform: translate(calc(50vw - 50%), calc(50vh - 100px)); /* Move to bottom-right */
+  }
+  75% {
+    transform: translate(calc(-50vw + 50%), calc(50vh - 100px)); /* Move to bottom-left */
+  }
+  100% {
+    transform: translate(calc(-50vw + 50%), calc(-50vh + 100px)); /* Back to center */
+  }
+}
+
+.msg a {
+  text-decoration: none;
+  position: absolute; /* Position absolute for free movement */
+  animation: moveAround 5s infinite alternate; /* Apply animation */
+  animation-timing-function: linear; /* Ensure smooth transitions between random values */
+}
+
+@keyframes randomMovement {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(rand() * (100vw - 200px) + 100px), calc(rand() * (100vh - 200px) + 100px));
+  }
+}
+
+
+.Container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  color: #e6dcdc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.main img{
+ width: 200px;
+}
+.element {
+  position: absolute ;
+  top: 40%;
+  left: 38%;
+}
+.element2 {
+  position: absolute ;
+  top: 40%;
+  right: 38%;
+}
+.element3 {
+  position: absolute ;
+  top: 20%;
+  right: 20%;
+}
+.element4 {
+  position: absolute ;
+  top: 20%;
+  left: 20%;
+}
+
+
+
